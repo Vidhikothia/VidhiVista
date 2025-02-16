@@ -19,6 +19,7 @@ document.querySelectorAll(".nav-menu a").forEach(link => {
 /* ----- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----- */
 window.onscroll = function () {
   headerShadow();
+  scrollActive();
 };
 
 function headerShadow() {
@@ -30,6 +31,23 @@ function headerShadow() {
       navHeader.classList.remove("shadow");
   }
 }
+
+/* ----- SMOOTH SCROLL EFFECT ----- */
+document.querySelectorAll('.nav-menu a').forEach(anchor => {
+  anchor.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      const targetId = this.getAttribute('href').substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+          window.scrollTo({
+              top: targetSection.offsetTop - 50,
+              behavior: "smooth"
+          });
+      }
+  });
+});
 
 /* ----- TYPING EFFECT ----- */
 var typingEffect = new Typed(".typedText", {
@@ -90,8 +108,6 @@ function scrollActive() {
       }
   });
 }
-
-window.addEventListener("scroll", scrollActive);
 
 /* ----- DARK MODE TOGGLE ----- */
 const darkModeToggle = document.getElementById("dark-mode-toggle");
