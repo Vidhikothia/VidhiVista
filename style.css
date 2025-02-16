@@ -32,6 +32,7 @@
 /* ----- SMOOTH SCROLL ----- */
 html{
     scroll-behavior: smooth;
+    width:-webkit-fill-available;
 }
 
 /* ----- CHANGE THE SCROLL BAR DESIGN ----- */
@@ -213,7 +214,6 @@ nav{
 }
 .featured-text-btn>.blue-btn{
     background: var(--text-color-third);
-    color: var(--color-white);
 }
 .featured-text-btn>.blue-btn:hover{
     background: var(--text-color-third);
@@ -426,6 +426,7 @@ h3{
     flex-direction: column;
     width: 30%;
     height: 250px;
+    text-decoration: none;
     background: var(--color-white);
     border-radius: 20px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
@@ -536,9 +537,8 @@ footer{
     margin-top: 10px;
 }
 
+/* responsive */
 
-
-/* ----- MEDIA QUERY == 1024px / RESPONSIVE ----- */
 @media only screen and (max-width: 1024px){
     .featured-text{
         padding: 0;
@@ -549,7 +549,6 @@ footer{
     }
 }
 
-/* ----- MEDIA QUERY == 900px / RESPONSIVE ----- */
 @media only screen and (max-width: 900px) {
     .nav-button{
         display: none;
@@ -568,7 +567,7 @@ footer{
         backdrop-filter: blur(20px);
         width: 100%;
         min-height: 450px;
-        height: 90vh;
+        height: 100vh;
         transition: .3s;
     }
     .nav_menu_list{
@@ -623,16 +622,16 @@ footer{
         justify-content: center;
     }
     .project-box{
-        width: 80%;
+        width: 100%;
     }
-
 }
 
-/* ----- MEDIA QUERY == 540px / RESPONSIVE ----- */
-
 @media only screen and (max-width: 540px){
+    .wrapper{
+        padding-left: 100px;
+    }
     .featured-name{
-        font-size: 40px;
+        font-size: 30px;
     }
     .project-box{
         width: 100%;
@@ -645,8 +644,8 @@ footer{
     }
 }
 
-/* ----- MEDIA QUERY == 400px / RESPONSIVE ----- */
 @media only screen and (max-width: 400px){
+    
     .nav{
         padding-inline: 5vw;
     }
@@ -675,19 +674,19 @@ footer{
     }
 }
 
-/* ----- MEDIA QUERY == 320px / RESPONSIVE ----- */
 @media only screen and (max-width: 320px){
+    
     .nav{
         padding-inline: 3vw;
     }
     .nav-logo{
-        font-size: 14px;
+        font-size: 10px;
     }
     .nav-menu.responsive{
         top: 60px;
     }
     .featured-name{
-        font-size: 24px;
+        font-size: 20px;
     }
     .featured-text-btn{
         gap: 5px;
@@ -701,4 +700,16 @@ footer{
     }
 }
 
-
+  
+  @media (max-width: 768px) {
+    p {
+      font-size: 16px; /* Adjust for tablets */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    p {
+      font-size: 14px; /* Adjust for mobile screens */
+    }
+  }
+  
