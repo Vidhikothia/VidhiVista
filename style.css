@@ -81,6 +81,8 @@ i{
 body{
     background: var(--body-color);
 }
+
+
 .container{
     width: 100%;
     position: relative;
@@ -104,7 +106,7 @@ nav{
     color: var(--third-color);
     padding: 1px 5px;
     font-size: 25px;
-    font-weight: 800;
+    font-weight: 600;
     border-radius: 5px;
 }
 
@@ -162,7 +164,7 @@ nav{
 
 /* ----- WRAPPER DESIGN ----- */
 .wrapper{
-    padding-inline: 10vw;
+    padding-inline: 6vw;
 }
 
 /* ----- FEATURED BOX ----- */
@@ -713,3 +715,4 @@ footer{
     }
   }
   
+
